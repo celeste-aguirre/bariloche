@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #fc036b;
+}
+ul{
+    list-style: none;
+}
+.active{
+    color: #fc036b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+/*Para remover el scroll lateral*/
+body , html{
+    overflow-x: hidden;
+    font-family: Poppins;
+}
+/*Navbar*/
+.navbar{
+    position: fixed; /*se sigue moviendo al hacer scroll*/
+    top: 0; /*a más px, más abajo*/
+    left: 0;/*a más px, más a la derecha*/
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: #00000036;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    margin: 0 30px; /*top-bpttom right left*/
+}
+
+/*Header*/
+header{
+    width: 100vw; /*ancho del viewport*/
+    height: 100vh; /*altura del viewport*/
+    /*pongo dos puntos en el url porque tengo que salir de la carpeta css y entrar a img*/
+    background-image: url(../img/pexels-kristina-gain-4596205.jpg);
+    background-position: bottom;/*se acomoda abajo de viewport*/
+    background-size: cover;/*siempre abajo del position , especifica el tamaño de las imágenes de fondo.*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background-color: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1{
+    font-size: 9vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.ctn a{
+    color: whitesmoke;
+}
+.ctn{
+    padding: 8px 15px;
+    background: #fc036b;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+.menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*EVENTS*/
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.events .col{
+    width: 50%;
+    height: 50%;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: #49497e;
+}
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row .col img{
+    width: 80%;
+    height: 90%;
+}
+.events .row{
+    margin-top: 50px;
+    
+}
+h4{
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+p{
+    color: #7c7c7c;
+    padding: 0px 40px;
+}
+.events .ctn{
+    margin-top: 30px;
+}
+
+/*EXPLORE*/
+.explore{
+    background-image: url(../img/bg2.png);
+    /*width: 100vw;*/
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+.explore-content{
+    width: 55%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.explore-content h2{
+    font-size: 7vmin;
+}
+.explore-content p{
+    color: white;
+}
+.explore-content .line{
+    margin-bottom: 50px;
+}
+.explore-content .ctn{
+    margin-top: 40px;
+}
+.content-col{
+    width: 40%;
+}
+.image-col{
+    width: 60%;
+}
+.tours .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.tours .image-gallery img{
+    max-width: 300px;
+    margin: 10px;
+}
+.content-col h2{
+    font-size: 7vmin;
+    color: #484872;
+}
+.content-col .line{
+    margin-left: -1px;
+}
+.content-col p{
+    padding: 0;
+    margin: 30px auto;
+}
+
+.content-col .ctn{
+    margin-left: -100px;
+}
+
+footer{
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background-color: #484872;
+    text-align: center;
+}
+
+footer p{
+    color: whitesmoke;
+    padding: 20px auto;
+}
+
+
+/*Mobile device*/
+@media only screen and (max-width:820px){
+    .menu-btn{
+        display: block;
+    }
+
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #484872;
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-links li{
+        margin: 30px auto;
+    }
+
+    /*Events*/
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .row .col{
+        margin: 20px auto;
+    }
+
+    .col img{
+        max-width: 90%;
+    }
+
+    /*Explore*/
+    .explore-content{
+        padding: 0px;
+        width: 100%;
+    }
+
+    /*Tours*/
+    .tours .col{
+        width: 100%;
+    }
+
+    .image-gallery{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-gallery img{
+        width: 90%;
+    }
+
+    .footer{
+        padding: 10px;
+    }
+}
+
+/*Animations*/
+img{
+    transition: transform .3s ease;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+.ctn:hover{
+    background-color: whitesmoke;
+    color: #fc036b;
+    box-shadow: 2px 2px 5px #00000056;
+}
+
+.contact:hover a{
+    color: #fc036b;
+}
+
+
+li:hover a{
+    color: black;
+}
+.nav-links a{
+    font-weight: bold;
+    color: #ffffff
+}

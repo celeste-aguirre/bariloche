@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARILOCHE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="logo">BARILOCHE</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="#explore">Explorar</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li class="ctn contact"><a href="#">Contacto</a></li>
+        </ul>
+        <img src="img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+
+    <header  id="home">
+        <div class="header-content">
+            <h2>La naturaleza nos llama a disfrutar</h2>
+            <div class="line"></div>
+            <h1>DESCUBRÍ BARILOCHE</h1>
+            <a href="#" class="ctn">Conocé más</a>
+        </div>
+    </header>
+
+    <!--EVENTS-->
+    <section class="events">
+        <div class="title">
+            <h2 id="events">Proximos eventos</h2>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="img/343_brut.jpg" alt="">
+                <h4>Brut Ultra Maratón de Montaña</h4>
+                <p>Con distancias de 50 & 70 Kilómetros, celebra la maravillosa posibilidad de correr en los senderos y montañas clásicos de San Carlos de Bariloche.</p>
+                <a href="#" class="ctn">Conocé más</a>
+            </div>
+            <div class="col">
+                <img src="img/350_ddd.jpg" alt="">
+                <h4>Mil Millas Sport</h4>
+                <p>Llega la tradicional carrera de autos sports históricos. Un verdadero museo itinerante recorren nuestra ciudad en una fiesta increíble para los amantes del deporte motor.
+                </p>
+                <a href="#" class="ctn">Conocé más</a>
+            </div>
+        </div>
+    </section>
+
+    <!--EXPLORE-->
+    <section class="explore">
+        <div class="explore-content">
+            <h2 id="explore">EXPLORÁ UN NUEVO PAISAJE</h2>
+            <div class="line"></div>
+            <p>Bariloche es una ciudad ubicada entre bosques milenarios, montañas cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, enmarcada por algunas de las bellezas naturales más importantes del país.</p>
+            <a href="#" class="ctn">Conocé más</a>
+        </div>
+    </section>
+   
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+            <h2 id="tours">TOURS & EXPERIENCIAS</h2>
+            <div class="line"></div>
+            <p>
+                El mayor desafío es qué hacer primero. Conocé las actividades en Bariloche.
+            </p>
+            <a href="#" class="ctn">Conocé más</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="img/buceo_01.jpg" alt="">
+                    <img src="img/cabalgata_02.jpg" alt="">
+                    <img src="img/canopy_02.jpg" alt="">
+                    <img src="img/parapente_02.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, reprehenderit.
+        </p>
+        <p>Terminos y condiciones</p>
+    </footer>
+
+
+    <!--JAVASCRIPT-->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', ()=>{
+            navLinks.classList.toggle('mobile-menu');
+        });
+    </script>
+
+</body>
+</html>
